@@ -22,14 +22,18 @@ body{
     color: var(--text-color);
     background: var(--bg-color);
 }
-
+header{
+    background: #cbf4f8;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 /*============== Navigation Bar ==================*/
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 3% 5%;
-    background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)),url(photo/Profile.jpg);
 }
 nav h2{
     color: #7daff0;
@@ -52,7 +56,7 @@ nav a{
 .nav-menu ul li a{
         text-decoration: none;
         font-weight: bold;
-        color: white;
+        color: black;
         text-transform: uppercase;
         transition: all .4s ease;
 }
@@ -80,14 +84,14 @@ nav span{
 @media(max-width:700px){
 nav span{
     display: block;
-    color: white;
+    color: black;
     font-size: 20px;
     margin: 10px;
     cursor: pointer;
 }
 .nav-menu{
     position: absolute;
-    background: rgb(0,0,0,0.3);
+    background: rgba(14, 13, 13, 0.3);
     height: 100vh;
     width: 300px;
     top: 0;
@@ -99,6 +103,7 @@ nav span{
 .nav-menu ul li{
     display: block;
     margin: 16px 0;
+    color: white;
 }
 .nav-menu ul{
     padding: 10px 20px;
@@ -112,32 +117,33 @@ section{
     padding: 80px 18%;
 }
 .home{
-    height: 90vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    grid-gap: 3rem;
-}
-.home-text h1{
-    margin: 20px 0 20px;
-    font-size: var(--big-font);
-    line-height: 1.1;
-}
-.home-text h3{
-    color: var(--second-color);
-    font-size: 35px;
-    font-weight: 600;
-}
-.home-text p{
-    font-size: var(--p-font);
-    color: var(--other-color);
-    line-height: 27px;
-    font-weight: 400;
-    margin-bottom: 30px;
-    font-family: sans-serif;
-}
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        align-items: center;
+        grid-gap: 3rem;
+    }
+    .home-img img{
+        width: 100%;
+        height: auto;
+    }
+    .home-text h3{
+        color: var(--second-color);
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .home-text h2{
+        margin: 15px 0 15px;
+        font-size: var(--h2-font);
+        line-height: 1.1;
+    }
+    .home-text p{
+        font-size: var(--p-font);
+        color: var(--other-color);
+        line-height: 27px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        font-family: sans-serif;
+    }
 .btn{
     position: absolute;
     color: white;
@@ -151,12 +157,35 @@ section{
     cursor: pointer;
 }
 .btn:hover{
-        transform: scale(1.1);
+    transform: scale(1.1);
 }
-
+@media(max-width:700px){
+    .home-img img{
+        width: 190px;
+        height: 160px; 
+        margin-left: 20%;   
+        margin-bottom: 5%;   
+    }
+    .home-text h3{
+        font-size: 30px;
+        margin-left: -125%;
+    }
+    .home-text h2{
+        font-size: 28px;
+        margin-left: -250%;
+        text-align: center;
+    }
+    .home-text p{
+        margin-top: 140%;
+        margin-left: -233%;
+    }
+    .btn{
+        margin-left: -42%;
+    }
+}
 /*=================About Section ===============*/
 .about{
-    background: url(photo/pngtree-green-comfortable-concise-clean-image_11063.jpg);
+    background: #cbf4f8;
     background-size: cover;
     background-position: center;
     display: grid;
@@ -186,8 +215,31 @@ section{
     margin-bottom: 30px;
     font-family: sans-serif;
 }
-
+@media(max-width:700px){
+    .about-img img{
+        width: 190px;
+        height: 160px; 
+        margin-left: 20%; 
+        margin-top: 5%;      
+    }
+    .about-text h3{
+        font-size: 30px;
+        margin-left: -120%;
+    }
+    .about-text h2{
+        font-size: 28px;
+        margin-left: -250%;
+        text-align: center;
+    }
+    .about-text p{
+        margin-top: 130%;
+        margin-left: -210%;
+    }
+}
 /*============ Food Menu ================*/
+.menu{
+    background: #cbf4f8;
+}
 .center-text{
     text-align: center;
 }
@@ -255,9 +307,18 @@ section{
 }
 .box-btn{
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 1rem;
+}
+@media(max-width:700px){
+    .box-btn{
+        margin-left: 200%;
+        margin-bottom: 90%;
+    }
 }
 /*======================= Our Team ================*/
+.team{
+    background: #cbf4f8;
+}
 .team-content{
     display: grid;
     grid-template-columns: repeat(2, 2fr);
@@ -319,77 +380,16 @@ section{
 .row:hover{
     transform: scale(1.04) translateY(-5px);
 }
-
-/*================= Newsletter ================*/
-.container{
-    padding: 70px 80px;
-    box-shadow: 0 5px 40px rgba(19 8 73 / 13%);
-    border-radius: 20px;
-}
-.newsletter-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-.news-img{
-    margin-top: -5rem;
-}
-.news-text{
-    margin-top: -5rem;
-}
-.news-text h3{
-    color: var(--second-color);
-    font-size: 30px;
-    font-weight: 600;
-}
-.news-text h2{
-    margin:15px 0 15px;
-    font-size: var(--h2-font);
-    line-height: 1.1;
-}
-.news-text p{
-    font-size: var(--p-font);
-    color: var(--other-color);
-    font-weight: 400;
-    line-height: 25px;
-    font-family: sans-serif;
-}
-.letter{
-    margin-top: -5rem;
-}
-.letter form{
-    position: absolute;
-    width: 350px;
-    max-width: 100;
-    margin-top: 13%;
-    margin-left: -50%;
-}
-.letter form input:first-child{
-    padding:  12px 40px;
-    border: 2px solid var(--main-color);
-    outline: none;
-    border-radius: 30px;
-}
-.letter form input:last-child{
-    position: absolute;
-    display: inline-block;
-    outline: none;
-    border: none;
-    padding: 12px 18px;
-    background: var(--main-color);
-    color: #fff;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.40s ease;
-}
-.letter form input:last-child:hover{
-    transform: scale(1.04);
+@media(max-width:700px){
+    .team-content{
+        margin-left: -25%;
+        padding: px;
+    }
 }
 
 /* =============== blog ============== */
 .blog{
-    background: url(photo/pngtree-green-comfortable-concise-clean-image_11063.jpg);
+    background: #cbf4f8;
     background: cover;
     background-position: center;
 }
@@ -454,12 +454,112 @@ section{
 .main:hover{
     transform: scale(1.04) translateY(-5px);
 }
+@media(max-width:700px){
+    .blog-content{
+        margin-left: -52px;
+    }
+    .blog-btn a{
+        text-align: center;
+        font-size: small;
+        color: #f54300;
+    }
+    .blog-text p{
+        font-size: 15px;
+    }
+    .blog-content img{
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+}
+/* contact */
+.Contact{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.Contact h2{
+    text-decoration: underline;
+    color: #20b2aa;
+    font-size: 30px;
+    cursor: pointer;
+}
+.Contact h3{
+    cursor: pointer;
+    color: black;
+}
+.Contact-col{
+    box-sizing: border-box;
+    background: #f7e5f6;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: left;
+    padding: 20px 10px 30px 30px;
+}
+.Contact-col label,b{
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+.Contact-col input{
+    font-size: 20px;
+    padding: 10px 20px;
+    transition: .5s;
+    color: black;
+    font-weight: bold;
+}
+.Contact-col input:hover{
+        background: #20b2aa;
+        color: white;
+        border-color: black;
+        border-radius: 2px;
+}
+.Contact-col textarea:hover{
+        background: #20b2aa;
+        color: white;
+        border-width: 2px;
+        border-color: black;
+}
+@media(max-width:950px){
+    .Contact-col{
+        box-sizing: border-box;
+        background: #f7e5f6;
+        margin-top: 30px;
+        border-radius: 10px;
+        text-align: left;
+        padding: 10px 10px 10px 10px;
+    }
+    .Contact{
+        width: 80%;
+        text-align: center;
+        padding-top: 100px;
+    }
+    .Contact-col input{
+        font-size: 20px;
+        padding: 8px 10px;
+        transition: .5s;
+        color: black;
+    }
+    .Contact-col label,b{
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .Contact-col textarea{
+        font-size: 9px;
+    }
+    .Contact-col{
+        display: flex;
+    }
 
+}
 /* =====================Footer Section ==============*/
 .find-me{
     width: 100%;
     text-align: center;
-    background: #f7e5f6;
+    background: #cbf4f8;
     padding-bottom: 10px;
     padding-top: 50px;
 }
